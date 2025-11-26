@@ -23,11 +23,42 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="ko">
+      <body className="flex flex-col min-h-screen">
+        {/* Header */}
+        <header className="bg-white border-b border-gray-200">
+          <div className="container mx-auto px-4 py-4">
+            <h1 className="text-2xl font-bold text-black">My Website</h1>
+          </div>
+        </header>
+
+        {/* Navigator */}
+        <nav className="bg-gray-50 border-b border-gray-200">
+          <div className="container mx-auto px-4">
+            <ul className="flex gap-6 py-3">
+              <li>홈</li>
+              <li>소개</li>
+              <li>마이페이지</li>
+            </ul>
+          </div>
+        </nav>
+
+        {/* Main Content */}
+        <main className="flex-1">
+          <div className="container mx-auto px-4 py-10">
+            {/* 라우팅별 하위 페이지컴포넌트가 보여질 자리 */}
+            {children}
+          </div>
+        </main>
+
+        {/* Footer */}
+        <footer className="bg-white border-t border-gray-200 mt-auto">
+          <div className="container mx-auto px-4 py-6">
+            <p className="text-center text-gray-600 text-sm">
+              © 2025 My Website. All rights reserved.
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );

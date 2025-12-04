@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test@test.com",
+      "password": "1234",
+      "name": "홍길동",
+      "role": "USER"
+    },
+    {
+      "id": 2,
+      "email": "admin@test.com",
+      "password": "1234",
+      "name": "관리자",
+      "role": "ADMIN"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Next.js 16 학습 중",
+      "content": "서버 액션 너무 편하네요.",
+      "userId": 1,
+      "author": "홍길동",
+      "createdAt": "2025-05-01T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "관리자 필독 공지",
+      "content": "게시판 이용 수칙입니다.",
+      "userId": 2,
+      "author": "관리자",
+      "createdAt": "2025-05-02T10:00:00.000Z"
+    }
+  ]
+}
